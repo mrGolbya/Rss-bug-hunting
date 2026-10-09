@@ -76,7 +76,8 @@ body {
 
 .tags {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 14px;
 }
