@@ -74,7 +74,7 @@ function clearCart() {
 }
 
 function renderCart() {
-  cartItemsEl.innerHTML = "";
+  cartItemsEl.replaceChildren();
   let total = "";
   cart.forEach((item) => {
     const lineTotal = item.price;
