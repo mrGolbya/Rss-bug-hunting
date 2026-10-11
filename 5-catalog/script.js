@@ -23,18 +23,20 @@ function getFiltered() {
   const sort = sortSelect.value;
 
   if (search) {
-    result = result.filter((p) => p.name.toLowerCase().includes(search.toLowerCase()));
-}
+    result = result.filter((p) =>
+      p.name.toLowerCase().includes(search.toLowerCase()),
+    );
+  }
 
   if (category !== "all") {
     result = result.filter((p) => p.category === category);
   }
 
   if (sort === "asc") {
-  result.sort((a, b) => a.price - b.price);
-} else if (sort === "desc") {
-  result.sort((a, b) => b.price - a.price);
-}
+    result.sort((a, b) => a.price - b.price);
+  } else if (sort === "desc") {
+    result.sort((a, b) => b.price - a.price);
+  }
 
   return result;
 }
@@ -59,7 +61,7 @@ resetBtn.addEventListener("click", () => {
   searchInput.value = "";
   categorySelect.value = "all";
   sortSelect.value = "default";
-  render(); 
+  render();
 });
 
-render()
+render();
